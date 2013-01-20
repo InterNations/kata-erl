@@ -29,4 +29,4 @@ test: $(TEST_OBJ)
 	erl -pa $(TEST_OUT) -noshell $(TEST_OPTS) -s init stop
 
 clean:
-	rm $(APP_OBJ) $(TEST_OBJ)
+	rm -f $(TEST_OUT)/* $(APP_OUT)/*
