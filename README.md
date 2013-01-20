@@ -1,8 +1,7 @@
-# C coding kata template
+# Erlang coding kata template
 
-A simple template project for C coding katas. Comes with minimal dependencies, no autotools, no advanced build system.
-Provides integration for *check* as a unit testing framework. Builds a shared library (currently a dylib, so OS X only),
-a program binary and a check binary.
+A simple template project for Erlang coding katas. Comes with minimal dependencies and a Makefile for building your
+erlang project. Provides integration for *EUnit* as a unit testing framework.
 
  - `make` to build the whole project
  - `make kata` to build the kata binary only
