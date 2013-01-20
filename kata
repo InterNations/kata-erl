@@ -1,0 +1,1 @@
+erl -pa ./out/production -noshell -s kata main -s init stop
