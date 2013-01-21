@@ -9,7 +9,7 @@ APP_ERLC_FLAGS = -o $(APP_OUT)
 TEST_OUT = out/test
 TEST_OBJ = $(APP_OBJ_LIST:src%=$(TEST_OUT)%)
 TEST_ERLC_FLAGS = -o $(TEST_OUT) -DTEST
-TEST_OPTS = -s library test
+TEST_OPTS = -s kata test
 
 ERLC = erlc
 
