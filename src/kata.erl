@@ -1,15 +1,23 @@
 -module(kata).
--export([add/2]).
+-export([read_lines/1]).
+
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 -endif.
 
-add(N, M) -> N + M.
+read_lines(List) ->
+    lists:foldl(fun(Elem, DictIn) -> append_to_dict(Elem, DictIn) end, dict:new(), List).
+
+append_to_dict(Elem, DictIn) ->
+    dict:append(lists:sort(Elem), Elem, DictIn).
 
 -ifdef(TEST).
-add_test_() ->
-    [?_assert(add(1, 1) =:= 2),
-     ?_assert(add(1, 2) =:= 3),
-     ?_assert(add(0, 0) =:= 0)
-    ].
--endif.
+
+%    [?_assert(add(1, 1) =:= 2),
+%     ?_assert(add(1, 2) =:= 3),
+%     ?_assert(add(0, 0) =:= 0)
+%    ].
+
+ -endif.
+
+
